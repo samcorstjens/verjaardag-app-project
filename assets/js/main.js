@@ -8,11 +8,12 @@ $(document).ready(function() {
 
 
 
-    console.log(result);
+    //console.log(result);
     $('#player').attr('src', result);
     //////////////////////////////////
-    // $('#directURL').text('Direct link: '+result);
-    $('#resultURL').text('Search result: '+"https://www.youtube.com/results?search_query="+search);
+    //$('#directURL').text('Direct link: '+result);
+  // $('#resultURL').text('Search result: '+"https://www.youtube.com/results?search_query="+search);
+    //$('#test').text('Direct result : ' + result);
 
 
     $('#directURL1').attr('href', result);
@@ -25,7 +26,7 @@ $(document).ready(function() {
   //freestyler id = ymNFyxvIdaM
   $('#link').click(function() {
     var ytid = $('.ytp-title-link').href;
-    $('#directURL').text('Direct link: '+ytid);
+    $('#directURL').text('Direct link does it change: '+ytid);
   });
 
 

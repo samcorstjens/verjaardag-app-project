@@ -18,29 +18,47 @@
     mysqli_close($conn);
 ?>
 
-<?php include('inc/header.php'); ?>
-        <div class="container">
+<?php
+include('inc/header.php');
+?>
+       <div class="container">
           <h1>Posts</h1>
           <a class="btn btn-success" href="Export.php"> Export To Excel </a>
           <div class="row col-12">
-            <?php foreach($songs as $song) : ?>
-              <div class="jumbotron col-4">
+            <?php
+foreach ($songs as $song):
+?>
+             <div class="jumbotron col-4">
 
                   <h6>Username: </h6>
-                  <p><?php echo $song['username']; ?></p>
+                  <p><?php
+    echo $song['username'];
+?></p>
                   <h6>E-mail: </h6>
-                  <p><?php echo $song['email']; ?></p>
+                  <p><?php
+    echo $song['email'];
+?></p>
                   <h6>Personal message: </h6>
                   <div class="pmwrapper">
-                    <p class="pm"><?php echo $song['personalmessage']; ?></p><br><br>
+                    <p class="pm"><?php
+    echo $song['personalmessage'];
+?></p><br><br>
                   </div><br>
-                  <p class="createdAt">Created at: <?php echo $song['created_at']; ?></p>
+                  <p class="createdAt">Created at: <?php
+    echo $song['created_at'];
+?></p>
 
 
-                <a class="btn btn-secondary" href="post.php?id=<?php echo $song['id']; ?>">Read more</a>
+                <a class="btn btn-secondary" href="post.php?id=<?php
+    echo $song['id'];
+?>">Read more</a>
 
               </div>
-            <?php endforeach; ?>
-          </div>
+            <?php
+endforeach;
+?>
+         </div>
         </div>
-<?php include('inc/footer.php'); ?>
+<?php
+include('inc/footer.php');
+?>

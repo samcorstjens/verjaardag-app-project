@@ -1,12 +1,11 @@
 <?PHP
-
   require('config/config.php');
   require('config/db.php');
   $setSql = "SELECT * FROM songs";
   $setRec = mysqli_query($conn, $setSql);
 
   $columnHeader = '';
-  $columnHeader = "USERNAMES"."\t"."EMAILS"."\t"."PERSONAL_MESSAGES"."\t"."ARTIST1"."\t"."SONG1"."\t"."URL1"."\t"."ARTIST2"."\t"."SONG2"."\t"."URL2"."\t"."ARTIST3"."\t"."SONG3"."\t"."URL3";
+  $columnHeader = "ID"."\t"."USERNAMES"."\t"."EMAILS"."\t"."PERSONAL_MESSAGES"."\t"."ARTIST1"."\t"."SONG1"."\t"."URL1"."\t"."ARTIST2"."\t"."SONG2"."\t"."URL2"."\t"."ARTIST3"."\t"."SONG3"."\t"."URL3";
 
   $setData = '';
 
@@ -27,3 +26,4 @@
   header("Expires: 0");
 
   echo ucwords($columnHeader) . "\n" . $setData . "\n";
+?>

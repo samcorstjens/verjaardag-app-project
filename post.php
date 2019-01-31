@@ -8,7 +8,7 @@ session_start();
       //GET FROM
       $delete_id = mysqli_real_escape_string($conn, $_POST['delete_id']);
 
-      $query = "DELETE FROM Songs WHERE id = {$delete_id}";
+      $query = "DELETE FROM songs WHERE id = {$delete_id}";
 
       if(mysqli_query($conn, $query)){
           header('location: '.ROOT_URL.'');
@@ -21,7 +21,7 @@ session_start();
     $id = mysqli_real_escape_string($conn, $_GET['id']);
 
     //CREATE QUERY
-    $query = 'SELECT * FROM Songs WHERE id = '.$id;
+    $query = 'SELECT * FROM songs WHERE id = '.$id;
 
     //GET RESULT
     $result = mysqli_query($conn, $query);
@@ -37,7 +37,7 @@ session_start();
 
     //getting the results of a registrered email
 
-    
+
 ?>
 
 <?php include('inc/header.php'); ?>
