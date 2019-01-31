@@ -1,5 +1,5 @@
 # Verjaardag App
-
+Door Sam Corstjens, Thijs De Vries, Giuseppe Cagnazzo en Mariia Alen.
 ## Planning
 
 ###### PHP / SQL leren tot 24/01/2019
