@@ -6,4 +6,4 @@ Door Sam Corstjens, Thijs De Vries, Giuseppe Cagnazzo en Mariia Alen.
 
 ## Taak verdeling -> 24/01/2019.
 
-## Database : LoginData, Table : songs.
+###### Database : LoginData, Table : songs.
