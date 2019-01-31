@@ -4,6 +4,6 @@ Door Sam Corstjens, Thijs De Vries, Giuseppe Cagnazzo en Mariia Alen.
 
 ###### PHP / SQL leren tot 24/01/2019
 
-## Taak verdeling -> 24/01/2019.
+###### Taak verdeling -> 24/01/2019.
 
 ###### Database : LoginData, Table : songs.
