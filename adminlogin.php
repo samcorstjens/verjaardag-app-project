@@ -8,7 +8,7 @@ if (isset($_POST["submit"]) & $_POST["password"] == "pass")
   else
 if (isset($_POST["submit"]))
 	{
-	Echo "Fout Wachtwoord!";
+ echo '<script type="text/javascript">alert("Fout wachtwoord!")</script>';
 	}
 ?>
 

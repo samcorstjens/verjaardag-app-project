@@ -12,7 +12,7 @@ if (isset($_POST["submit"]) && preg_match("/\b(@)\b/", $_POST['email']))
 	if ($securimage->check($_POST['captcha_code']) == false)
 		{
 		echo "<h3>The security code you entered was incorrect.<br /><br />";
-		echo "Please go <a href='javascript:history.go(-1)'>back</a> and try again.</h3>";
+		echo "Please go <a href='index.php'>back</a> and try again.</h3>";
 		exit;
 		}
 	  else
@@ -25,13 +25,13 @@ if (isset($_POST["submit"]) && preg_match("/\b(@)\b/", $_POST['email']))
   else
 if (isset($_POST["submit"]))
 	{
-	echo "This is not a valid Email!";
+	echo '<script type="text/javascript">alert("Dit is geen geldig emailadress!")</script>';
 	}
 
 ?>
 
     <div class="frontpage container row col-12">
-      <h1>Geef hier uw favoriete top 3 dans/meezingliedjes op.</h1>
+      <h2>Geef hier uw favoriete top 3 dans/meezingliedjes op.</h2>
         <div class="form col-md-5">
             <form action="<?php
 $_SERVER['PHP_SELF']; ?>" method="post">
@@ -40,6 +40,7 @@ $_SERVER['PHP_SELF']; ?>" method="post">
                     <input type="text" name="email" class="form-control">
                     <br /></br>
                     <img id="captcha" src="securimage/securimage_show.php" alt="CAPTCHA Image" class="border border-primary" />
+										<br>
                     <input type="text" name="captcha_code" size="10" maxlength="6" />
 <a href="#" onclick="document.getElementById('captcha').src = 'securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a>
                     <br /></br>

@@ -8,20 +8,20 @@ session_start();
       //GET FROM
       $delete_id = mysqli_real_escape_string($conn, $_POST['delete_id']);
 
-      $query = "DELETE FROM songs WHERE id = {$delete_id}";
+      $query = "DELETE FROM songs WHERE ID = {$delete_id}";
 
       if(mysqli_query($conn, $query)){
-          header('location: '.ROOT_URL.'');
+          header('location: '.ROOT_URL.'my_password');
       } else {
         echo 'ERROR: '. mysqli_error($conn);
       }
     }
 
     //GET ID
-    $id = mysqli_real_escape_string($conn, $_GET['id']);
+    $id = mysqli_real_escape_string($conn, $_GET['ID']);
 
     //CREATE QUERY
-    $query = 'SELECT * FROM songs WHERE id = '.$id;
+    $query = 'SELECT * FROM songs WHERE ID = '.$id;
 
     //GET RESULT
     $result = mysqli_query($conn, $query);
@@ -65,7 +65,7 @@ session_start();
 
               <div class="col-6">
                 <form class="pull-right" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-                    <input type="hidden" name="delete_id" value="<?php echo $song['id']; ?>">
+                    <input type="hidden" name="delete_id" value="<?php echo $song['ID']; ?>">
                     <input type="submit" name="delete" value="Delete" class="deletePost btn btn-danger">
                 </form><br><br><br>
 

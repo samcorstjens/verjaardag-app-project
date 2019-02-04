@@ -36,25 +36,25 @@ if (isset($_POST['submit'])) {
     $song3   = mysqli_real_escape_string($conn, $_POST['song3']);
     $url3    = mysqli_real_escape_string($conn, $_POST['url3']);
     if (empty($gebruiker) || empty($email) || empty($personalmessage) || empty($artist1) || empty($song1) || empty($url1) || empty($artist2) || empty($song2) || empty($url2) || empty($artist3) || empty($song3) || empty($url3)) {
-        echo "Alles moet ingevult worden!";
+      echo '<script type="text/javascript">alert("Alle velden moeten ingevuld worden!")</script>';
     } else {
         $query = "INSERT INTO songs(username, email, personalmessage, artist1, song1, url1, artist2, song2, url2, artist3, song3, url3) VALUES('$gebruiker', '$email', '$personalmessage', '$artist1', '$song1', '$url1', '$artist2', '$song2', '$url2', '$artist3', '$song3', '$url3')";
         $all   = mysqli_query($conn, $query);
         if ($all) {
-            die(header('refresh: 10; url=index.php') . '<body style="background : #303030;"><h3 style="color:white;">Data has been send. If you wanna make changes to your data, login again after 10 seconds, or press <a style="color:#00bc8c;"href="addpost.php">HERE</a>.</h3>
+            die(header('refresh: 10; url=index.php') . '<body style="background : #303030;"><h1 style="color:white;">Data has been send. If you wanna make changes to your data, login again after 10 seconds, or press <a style="color:#00bc8c;"href="addpost.php">HERE</a>.</h1>
 <span style="color:white;" class="sr-only">Loading...</span></body>');
         } else {
             if (strlen($gebruiker) > 20) {
-                echo 'Je gebruikersnaam mag maar 20 letters lang zijn. ';
+              echo '<script type="text/javascript">alert("Je username mag maar 20 characters lang zijn!")</script>';
             } else {
                 $result = "UPDATE songs SET username = '$gebruiker', email = '$email', personalmessage = '$personalmessage', artist1 = '$artist1', song1 = '$song1', url1 = '$url1', artist2 = '$artist2', song2 = '$song2', url2 = '$url2', artist3 = '$artist3', song3 = '$song3', url3 = '$url3' WHERE email = '$email'";
                 $all2   = mysqli_query($conn, $result);
             }
             if ($all2) {
-                die(header('refresh: 10; url=index.php') . '<body style="background:#303030;"><h3 style="color:white;">Data updated. If you wanna make changes to your data, login again after 10 seconds, or press <a style="color:#00bc8c;"href="addpost.php">HERE</a>.</h3>
+                die(header('refresh: 10; url=index.php') . '<body style="background:#303030;"><h1 style="color:white;">Data updated. If you wanna make changes to your data, login again after 10 seconds, or press <a style="color:#00bc8c;"href="addpost.php">HERE</a>.</h1>
             <span style="color:white;" class="sr-only">Loading...</span></body>');
             } else {
-                echo 'Update fout!';
+
             }
         }
     }
@@ -161,7 +161,7 @@ echo $veld[11];
                 <h6> Direct Link : <a name="videolink" id="directURL1" href="#" target="_blank">link</a></h6>
                 <!--<h6 id="resultURL">Search result: </h6>-->
                 <h6> Search Link : <a id="resultURL1" href="#" target="_blank">link</a><h6>
-
+<br>
               <!--  <button class="btn btn-primary" name="search2" id="link" type="button">Get link</button>-->
 
             </form>

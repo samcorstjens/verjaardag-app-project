@@ -3,7 +3,7 @@
     require('config/db.php');
 
     //CREATE QUERY
-    $query = 'SELECT * FROM Songs ORDER BY created_at DESC';
+    $query = 'SELECT * FROM songs ORDER BY created_at DESC';
 
     //GET RESULT
     $result = mysqli_query($conn, $query);
@@ -23,11 +23,11 @@ include('inc/header.php');
 ?>
        <div class="container">
           <h1>Posts</h1>
-          <a class="btn btn-success" href="Export.php"> Export To Excel </a>
+          <a class="btn btn-success" href="Export.php"> Export Messages </a>
+          <br><br>
+          <a class="btn btn-success" href="Export2.php"> Export Songs </a>
           <div class="row col-12">
-            <?php
-foreach ($songs as $song):
-?>
+            <?php foreach ($songs as $song): ?>
              <div class="jumbotron col-4">
 
                   <h6>Username: </h6>
@@ -49,14 +49,12 @@ foreach ($songs as $song):
 ?></p>
 
 
-                <a class="btn btn-secondary" href="post.php?id=<?php
-    echo $song['id'];
+                <a class="btn btn-secondary" href="post.php?ID=<?php
+    echo $song['ID'];
 ?>">Read more</a>
 
               </div>
-            <?php
-endforeach;
-?>
+            <?php endforeach; ?>
          </div>
         </div>
 <?php
