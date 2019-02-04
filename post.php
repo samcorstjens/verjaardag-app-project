@@ -11,7 +11,7 @@ session_start();
       $query = "DELETE FROM songs WHERE ID = {$delete_id}";
 
       if(mysqli_query($conn, $query)){
-          header('location: '.ROOT_URL.'my_password');
+          header('location: '.ROOT_URL.'/verjaardag_app-master/admin.php');
       } else {
         echo 'ERROR: '. mysqli_error($conn);
       }
@@ -46,7 +46,7 @@ session_start();
 
             <div class="jumbotron row col-12">
               <div class="col-6">
-                <a href="<?php echo ROOT_URL; ?>admin.php" class="backPost btn btn-primary">Back</a><br><br><br>
+                <a href="<?php echo ROOT_URL; ?>/verjaardag_app-master/admin.php" class="backPost btn btn-primary">Back</a><br><br><br>
 
 
                 <h6>E-mail: </h6>

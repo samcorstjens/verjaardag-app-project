@@ -22,11 +22,6 @@ if (isset($_POST["submit"]) && preg_match("/\b(@)\b/", $_POST['email']))
 		echo "<script> window.location.assign('addpost.php'); </script>";
 		}
 	}
-  else
-if (isset($_POST["submit"]))
-	{
-	echo '<script type="text/javascript">alert("Dit is geen geldig emailadress!")</script>';
-	}
 
 ?>
 
@@ -37,7 +32,7 @@ if (isset($_POST["submit"]))
 $_SERVER['PHP_SELF']; ?>" method="post">
                 <div class="form-group">
                     <label>E-mail</label>
-                    <input type="text" name="email" class="form-control">
+                    <input type="email" name="email" class="form-control">
                     <br /></br>
                     <img id="captcha" src="securimage/securimage_show.php" alt="CAPTCHA Image" class="border border-primary" />
 										<br>

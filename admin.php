@@ -26,9 +26,10 @@ include('inc/header.php');
           <a class="btn btn-success" href="Export.php"> Export Messages </a>
           <br><br>
           <a class="btn btn-success" href="Export2.php"> Export Songs </a>
-          <div class="row col-12">
+
+          <div class="row col-md-12">
             <?php foreach ($songs as $song): ?>
-             <div class="jumbotron col-4">
+             <div class="jumbotron col-md-3 mt-2 ml-2">
 
                   <h6>Username: </h6>
                   <p><?php
